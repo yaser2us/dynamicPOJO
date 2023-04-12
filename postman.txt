@@ -1,0 +1,295 @@
+curl --location 'http://localhost:8080/api/sowhatmesh' \
+--header 'Content-Type: application/json' \
+--data '{
+    "data": {
+        "navigations": [
+            {
+                "id": 1,
+                "icon": "https://picsum.photos/200/300",
+                "title": "Canvas Valley",
+                "badge": "",
+                "path": "/dashboard",
+                "url": "dashboardV1"
+            },
+            {
+                "id": 2,
+                "icon": "aprovalIcon",
+                "title": "Approvals",
+                "badge": "3",
+                "path": "/approvals",
+                "url": "todo"
+            },
+            {
+                "id": 3,
+                "icon": "billPaymentIcon",
+                "title": "Bill Payment",
+                "badge": "",
+                "path": "/billPayment",
+                "url": "todo"
+            },
+            {
+                "id": 4,
+                "icon": "transferIcon",
+                "title": "Transfer",
+                "badge": "",
+                "path": "/transfer",
+                "url": "dashboardFT"
+            },
+            {
+                "id": 5,
+                "icon": "scheduledTransactionIcon",
+                "title": "Scheduled Transaction",
+                "badge": "",
+                "path": "/scheduledTransaction",
+                "url": "todo"
+            },
+            {
+                "id": 7,
+                "icon": "bulkPaymentIcon",
+                "title": "Bulk Payment",
+                "badge": "",
+                "path": "/bulkPayment",
+                "url": "todo"
+            },
+            {
+                "id": 8,
+                "icon": "requestedPaymentIcon",
+                "title": "Request Payment",
+                "badge": "",
+                "path": "/requestedPayment",
+                "url": "todo"
+            },
+            {
+                "id": 9,
+                "icon": "viewStatementsIcon",
+                "title": "View Statement",
+                "badge": "",
+                "path": "/viewStatement",
+                "url": "todo"
+            },
+            {
+                "id": 10,
+                "icon": "businessDashboardIcon",
+                "title": "Business Dashboard",
+                "badge": "",
+                "path": "/bussinessDashboard",
+                "url": "todo"
+            },
+            {
+                "id": 11,
+                "icon": "applyIcon",
+                "title": "Apply",
+                "badge": "",
+                "path": "/apply",
+                "url": "todo"
+            },
+            {
+                "id": 12,
+                "icon": "investmentIcon",
+                "title": "Investment",
+                "badge": "",
+                "path": "/investment",
+                "url": "todo"
+            },
+            {
+                "id": 13,
+                "icon": "forexCounterIcon",
+                "title": "Forex Counter",
+                "badge": "",
+                "path": "/forexCounter",
+                "url": "todo"
+            },
+            {
+                "id": 14,
+                "icon": "inboxIcon",
+                "title": "Inbox",
+                "badge": "",
+                "path": "/inbox",
+                "url": "todo"
+            },
+            {
+                "id": 15,
+                "icon": "settingIcon",
+                "title": "Settings",
+                "badge": "",
+                "path": "/settings",
+                "url": "todo"
+            }
+        ],
+        "headerLabel": "New Other Account Transfer",
+        "mainHeaderActions": [
+            {
+                "actionType": "callAPI",
+                "name": "addNickName",
+                "actionURL": "http://localhost:8080/mocks/transfer",
+                "actionData": ""
+            }
+        ],
+        "recipientBanksConfig": {
+            "options": [
+                {
+                    "value": "citybank",
+                    "label": "citybank",
+                    "icon": "citybank_icon",
+                    "templateName": "leftIcon"
+                },
+                {
+                    "value": "afbb",
+                    "label": "Affin Bank Berhad",
+                    "icon": "citybank_icon",
+                    "templateName": "leftIcon"
+                },
+                {
+                    "value": "abmb",
+                    "label": "Alliance Bank Malaysia Berhad",
+                    "icon": "citybank_icon",
+                    "templateName": "leftIcon"
+                },
+                {
+                    "value": "bgkb",
+                    "label": "Bangkok Bank",
+                    "icon": "citybank_icon",
+                    "templateName": "leftIcon"
+                }
+            ],
+            "defaultValue": ""
+        },
+        "fromAccountConfig": {
+            "options": [
+                {
+                    "amount": "27,130.72",
+                    "templateName": "accountSelect",
+                    "accNo": "5640 2500 0421",
+                    "id": 1,
+                    "label": "Payment Account 3",
+                    "value": "ba3275b5-f2a9-4380-bc15-3e368361758a"
+                },
+                {
+                    "amount": "199,511,417.83",
+                    "templateName": "accountSelect",
+                    "accNo": "5141 2300 6623",
+                    "id": 2,
+                    "label": "Business PCA",
+                    "value": "8b6f9e4f-cf22-41c8-967c-5d69e464f816"
+                },
+                {
+                    "amount": "47,878.32",
+                    "templateName": "accountSelect",
+                    "accNo": "5640 2500 0438",
+                    "id": 3,
+                    "label": "Business Premier Mudharabah Account",
+                    "value": "e70312b7-821c-4ad9-9cf0-4d69298135eb"
+                },
+                {
+                    "amount": "0.00",
+                    "templateName": "accountSelect",
+                    "accNo": "5140 1205 5230",
+                    "id": 4,
+                    "label": "CCA SME FIRST",
+                    "value": "4186cd13-51fc-40c1-a21f-dac3f22068a7"
+                }
+            ],
+            "defaultValue": "ba3275b5-f2a9-4380-bc15-3e368361758a"
+        },
+        "actionBtnTransfer": {
+            "schema": {
+                "ownAccountTransfer": {
+                    "accountId": "recipientBankSelect",
+                    "fromAccountId": "fromAccountSelect",
+                    "amount": "inputAmount",
+                    "date": "date",
+                    "reference": "inputRecipientReference",
+                    "id": "<from backend>"
+                }
+            },
+            "actionType": "callPOSTAPI",
+            "name": "default",
+            "actionURL": "ownAccountTransferReviewDetails"
+        },
+        "transferTypeConfig": {
+            "defaultValue": "",
+            "visible": false,
+            "transferTypeOptions": [
+                {
+                    "disabled": false,
+                    "label": "Type 1",
+                    "value": "type1"
+                },
+                {
+                    "disabled": false,
+                    "label": "Type 2",
+                    "value": "type2"
+                },
+                {
+                    "disabled": false,
+                    "label": "Type 3",
+                    "value": "type3"
+                },
+                {
+                    "disabled": false,
+                    "label": "Type 4",
+                    "value": "type4"
+                }
+            ]
+        },
+        "transferModeConfig": {
+            "defaultValue": "",
+            "visible": false,
+            "transferModeOptions": [
+                {
+                    "disabled": false,
+                    "label": "Mode 1",
+                    "value": "mode1"
+                },
+                {
+                    "disabled": false,
+                    "label": "Mode 2",
+                    "value": "mode2"
+                },
+                {
+                    "disabled": false,
+                    "label": "Mode 3",
+                    "value": "mode3"
+                },
+                {
+                    "disabled": false,
+                    "label": "Mode 4",
+                    "value": "mode4"
+                }
+            ]
+        },
+        "frequencyConfig": {
+            "defaultValue": "",
+            "visible": false,
+            "frequencyOptions": [
+                {
+                    "disabled": false,
+                    "label": "Weekly",
+                    "value": "weekly"
+                },
+                {
+                    "disabled": false,
+                    "label": "Monthly",
+                    "value": "monthly"
+                },
+                {
+                    "disabled": false,
+                    "label": "Quarterly",
+                    "value": "quarterly"
+                },
+                {
+                    "disabled": false,
+                    "label": "Half Yearly",
+                    "value": "halfYearly"
+                },
+                {
+                    "disabled": false,
+                    "label": "Yearly",
+                    "value": "yearly"
+                }
+            ]
+        }
+    },
+    "path1": "recipientBanksConfig.options[].{Name: value, State: label, Yasser: '\''wow'\'', action: { actionURL: value, schema: { accountID: value}} }",
+    "path": "frequencyConfig.frequencyOptions[].{feqLabel: label, feqValue: value, action: { hi: '\''bye'\'', lol: { bye: value }} }"
+}'
