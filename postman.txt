@@ -293,3 +293,65 @@ curl --location 'http://localhost:8080/api/sowhatmesh' \
     "path1": "recipientBanksConfig.options[].{Name: value, State: label, Yasser: '\''wow'\'', action: { actionURL: value, schema: { accountID: value}} }",
     "path": "frequencyConfig.frequencyOptions[].{feqLabel: label, feqValue: value, action: { hi: '\''bye'\'', lol: { bye: value }} }"
 }'
+
+
+
+Exception encountered during context initialization - 
+cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: 
+Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource 
+    [org/springframework/boot/autoconfigure/web/servlet/
+        WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: 
+Unsatisfied dependency expressed through method 'requestMappingHandlerAdapter' 
+parameter 1: Error creating bean with name 'mvcConversionService' defined in class path 
+    resource [org/springframework/boot/autoconfigure/web/servlet/
+        WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: 
+Failed to instantiate [org.springframework.format.support.FormattingConversionService]: 
+Factory method 'mvcConversionService' threw exception with message: 
+Error creating bean with name 'jsonSchemaConverter' defined in class path resource
+    [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]:
+Unsatisfied dependency expressed through method 'jsonSchemaConverter' parameter 1: 
+Error creating bean with name 'associationLinks' defined in class path resource 
+    [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]:
+Unsatisfied dependency expressed through method 'associationLinks' parameter 0: 
+Error creating bean with name 'resourceMappings' defined in class path resource 
+    [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: 
+Unsatisfied dependency expressed through method 'resourceMappings' parameter 0: 
+Error creating bean with name 'repositories' defined in class path resource 
+    [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: 
+Failed to instantiate [org.springframework.data.repository.support.Repositories]: 
+Factory method 'repositories' threw exception with message: Error creating bean with 
+name 'rulesRepository' defined in com.example.demo.knowledgeBase.db.RulesRepository defined in 
+@EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration:
+    Not a managed type: class com.example.demo.knowledgeBase.db.RuleDbModel
+
+
+
+Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: 
+Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource 
+[org/springframework/boot/autoconfigure/web/servlet/
+WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: 
+Unsatisfied dependency expressed through method 'requestMappingHandlerAdapter' parameter 1:
+Error creating bean with name 'mvcConversionService' defined in class path resource 
+[org/springframework/boot/autoconfigure/web/servlet/
+WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: 
+Failed to instantiate [org.springframework.format.support.FormattingConversionService]: 
+Factory method 'mvcConversionService' threw exception with message: 
+Error creating bean with name 'jsonSchemaConverter' defined in class path resource 
+[org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: 
+Unsatisfied dependency expressed through method 'jsonSchemaConverter' parameter 1: 
+Error creating bean with name 'associationLinks' defined in class path resource 
+[org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: 
+Unsatisfied dependency expressed through method 'associationLinks' parameter 0: 
+Error creating bean with name 'resourceMappings' defined in class path resource 
+[org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: 
+Unsatisfied dependency expressed through method 'resourceMappings' parameter 0: 
+Error creating bean with name 'repositories' defined in class path resource 
+[org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: 
+Failed to instantiate [org.springframework.data.repository.support.Repositories]: 
+Factory method 'repositories' threw exception with message: 
+Error creating bean with name 'rulesRepository' defined in 
+com.example.demo.knowledgeBase.db.RulesRepository defined in 
+@EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: 
+Not a managed type: class com.example.demo.knowledgeBase.db.RuleDbModel
