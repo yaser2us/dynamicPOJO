@@ -37,7 +37,7 @@ dependencies {
 
 	// implementation "org.postgresql:postgresql:9.4-1206-jdbc42"
 	implementation "org.postgresql:postgresql"
-//	implementation "org.hsqldb:hsqldb"
+	implementation "org.hsqldb:hsqldb"
 	implementation "junit:junit:4.12"
 	// implementation "com.google.guava:21.0"
 	implementation("com.google.guava:guava:31.1-jre")
