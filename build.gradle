@@ -19,6 +19,7 @@ repositories {
 }
 
 dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
@@ -32,11 +33,11 @@ dependencies {
 	implementation group: 'io.burt', name: 'jmespath-jackson', version: '0.5.1'
 	implementation group: 'com.octomix.josson', name: 'josson', version: '1.4.3'
 
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 	// implementation "org.postgresql:postgresql:9.4-1206-jdbc42"
 	implementation "org.postgresql:postgresql"
+	implementation "org.hsqldb:hsqldb"
 	implementation "junit:junit:4.12"
 	// implementation "com.google.guava:21.0"
 	implementation("com.google.guava:guava:31.1-jre")
@@ -46,7 +47,6 @@ dependencies {
 	// implementation "org.springframework.security:spring-security-test"
 	implementation "com.typesafe:config:1.2.1"
 	implementation "org.mvel:mvel2:2.4.4.Final"
-	implementation 'javax.persistence:javax.persistence-api:2.2'
 
 	// <lombok.version>1.16.16</lombok.version>
     //     <guava.version>21.0</guava.version>

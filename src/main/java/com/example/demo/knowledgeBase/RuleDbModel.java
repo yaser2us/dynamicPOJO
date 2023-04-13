@@ -1,11 +1,11 @@
 package com.example.demo.knowledgeBase;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
 import java.io.Serializable;
 
 @Data
@@ -14,7 +14,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Entity
 @Table(name = "rules")
-// @IdClass(RuleDbModel.IdClass.class)
+@IdClass(RuleDbModel.IdClass.class)
 public class RuleDbModel {
     @Id
     @Column(name = "rule_namespace")
